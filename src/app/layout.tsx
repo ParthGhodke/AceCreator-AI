@@ -4,7 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AceCreator AI — Instagram Creator Intelligence & Content Studio",
   description:
-    "Instagram-first AI creator management platform for musicians, photographers, filmmakers, designers, and independent creators.",
+    "AceCreator AI is an Instagram-first creative operating system for sharper content, smarter strategy, and evidence-led growth.",
+  applicationName: "AceCreator AI",
+  keywords: ["Instagram growth", "creator strategy", "content studio", "creator analytics"],
 };
 
 export default function RootLayout({
