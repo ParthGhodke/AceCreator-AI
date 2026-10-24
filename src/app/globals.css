@@ -56,56 +56,52 @@
   --font-display: "Syne", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Core Surfaces */
-  --background: #f4f0e6;
-  --foreground: #111111;
-  --card: #fffdf5;
-  --card-foreground: #111111;
-  --popover: #fffdf5;
-  --popover-foreground: #111111;
+  /* Neo-brutalist dark surfaces: every foreground token is readable on its surface. */
+  --background: #0b0b0b;
+  --foreground: #f7f3ea;
+  --card: #151515;
+  --card-foreground: #f7f3ea;
+  --popover: #151515;
+  --popover-foreground: #f7f3ea;
 
-  /* Brand & Accent Tokens */
-  --primary: #d8ff3e;
-  --primary-foreground: #111111;
-  --secondary: #ffd2e1;
-  --secondary-foreground: #111111;
-  --muted: #e8e1d4;
-  --muted-foreground: #554f47;
+  /* High-contrast brand accents. */
+  --primary: #ccff00;
+  --primary-foreground: #0b0b0b;
+  --secondary: #ff9fc4;
+  --secondary-foreground: #0b0b0b;
+  --muted: #202020;
+  --muted-foreground: #c6beb3;
   --accent: #8ed8ff;
-  --accent-foreground: #111111;
-  --destructive: #ff6b5f;
+  --accent-foreground: #0b0b0b;
+  --destructive: #ff7168;
 
-  /* Quiet borders and focus rings */
-  --border: #111111;
-  --input: #111111;
+  --border: #f7f3ea;
+  --input: #bcb4a8;
   --ring: #ff4fa3;
 
-  /* Studio accent tokens */
   --y2k-cobalt: #6ca8ff;
   --y2k-cobalt-glow: #8ebcff;
-  --y2k-lime: #b7f34a;
+  --y2k-lime: #ccff00;
   --y2k-violet: #b49aff;
   --y2k-magenta: #ff8fbd;
   --y2k-cyan: #75d6c2;
 
-  /* Chart Palette */
-  --chart-1: #3B82F6;
-  --chart-2: #CCFF00;
-  --chart-3: #8B5CF6;
-  --chart-4: #EC4899;
-  --chart-5: #06B6D4;
+  --chart-1: #6ca8ff;
+  --chart-2: #ccff00;
+  --chart-3: #b49aff;
+  --chart-4: #ff8fbd;
+  --chart-5: #75d6c2;
 
   --radius: 0.2rem;
 
-  /* Sidebar Tokens */
-  --sidebar: rgba(14, 16, 23, 0.82);
-  --sidebar-foreground: #F3F5FA;
-  --sidebar-primary: #2563EB;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #161B29;
-  --sidebar-accent-foreground: #F3F5FA;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #3B82F6;
+  --sidebar: #101010;
+  --sidebar-foreground: #f7f3ea;
+  --sidebar-primary: #ccff00;
+  --sidebar-primary-foreground: #0b0b0b;
+  --sidebar-accent: #202020;
+  --sidebar-accent-foreground: #f7f3ea;
+  --sidebar-border: #3a3a3a;
+  --sidebar-ring: #ff4fa3;
 }
 
 @layer base {
@@ -154,20 +150,19 @@
 }
 
 .y2k-glass-panel {
-  background: #fffdf5;
-  border: 3px solid #111111;
-  box-shadow: 6px 6px 0 #111111;
+  background: #151515;
+  border: 3px solid #f7f3ea;
+  box-shadow: 6px 6px 0 #000000;
 }
 
 .y2k-chrome-text {
-  color: #111111;
-  -webkit-text-fill-color: #111111;
+  color: var(--foreground);
+  -webkit-text-fill-color: var(--foreground);
 }
 
 .y2k-iridescent-text {
-  background: #111111;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
 }
 
 .y2k-chrome-pill {
