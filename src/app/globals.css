@@ -1,0 +1,223 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* ==========================================================================
+   ACECREATOR AI — DIRECTION 1: FUTURISTIC Y2K CHROME & IRIDESCENCE
+   ("Structured Y2K Chrome" System: Deep Obsidian Matte Canvases + Liquid
+   Chrome 1px Specular Borders + Electric Cobalt & Acid Cyber Lime Accents)
+   ========================================================================== */
+
+:root,
+.dark {
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Syne", "Space Grotesk", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Core Surfaces */
+  --background: #06070B;
+  --foreground: #F3F5FA;
+  --card: #0E1017;
+  --card-foreground: #F3F5FA;
+  --popover: #111420;
+  --popover-foreground: #F3F5FA;
+
+  /* Brand & Accent Tokens */
+  --primary: #2563EB;
+  --primary-foreground: #FFFFFF;
+  --secondary: #161A27;
+  --secondary-foreground: #E2E8F0;
+  --muted: #131722;
+  --muted-foreground: #94A3B8;
+  --accent: #1B2133;
+  --accent-foreground: #F8FAFC;
+  --destructive: #F43F5E;
+
+  /* Specular Borders & Focus Rings */
+  --border: rgba(255, 255, 255, 0.11);
+  --input: rgba(255, 255, 255, 0.14);
+  --ring: #3B82F6;
+
+  /* Y2K Custom Extended Tokens */
+  --y2k-cobalt: #2563EB;
+  --y2k-cobalt-glow: #3B82F6;
+  --y2k-lime: #CCFF00;
+  --y2k-violet: #8B5CF6;
+  --y2k-magenta: #EC4899;
+  --y2k-cyan: #06B6D4;
+
+  /* Chart Palette */
+  --chart-1: #3B82F6;
+  --chart-2: #CCFF00;
+  --chart-3: #8B5CF6;
+  --chart-4: #EC4899;
+  --chart-5: #06B6D4;
+
+  --radius: 0.875rem;
+
+  /* Sidebar Tokens */
+  --sidebar: rgba(14, 16, 23, 0.82);
+  --sidebar-foreground: #F3F5FA;
+  --sidebar-primary: #2563EB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #161B29;
+  --sidebar-accent-foreground: #F3F5FA;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #3B82F6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at 12% 0%, rgba(37, 99, 235, 0.14), transparent 36%),
+      radial-gradient(circle at 88% 8%, rgba(139, 92, 246, 0.11), transparent 34%),
+      radial-gradient(circle at 50% 100%, rgba(204, 255, 0, 0.04), transparent 40%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, .font-display {
+    letter-spacing: -0.025em;
+  }
+
+  /* High-visibility keyboard focus indicator */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+/* Y2K Chrome & Iridescent Utility Classes */
+.y2k-chrome-card {
+  background: linear-gradient(180deg, rgba(22, 26, 39, 0.85) 0%, rgba(14, 16, 23, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    0 12px 32px -12px rgba(0, 0, 0, 0.65);
+}
+
+.y2k-iridescent-border {
+  position: relative;
+  background: linear-gradient(180deg, #131724 0%, #0D0F17 100%);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.25),
+    0 0 28px -8px rgba(59, 130, 246, 0.28);
+}
+
+.y2k-glass-panel {
+  background: rgba(14, 17, 26, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.y2k-chrome-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 52%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.y2k-iridescent-text {
+  background: linear-gradient(135deg, #60A5FA 0%, #C084FC 45%, #F472B6 75%, #CCFF00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.y2k-chrome-pill {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.y2k-acid-badge {
+  background: rgba(204, 255, 0, 0.14);
+  color: #CCFF00;
+  border: 1px solid rgba(204, 255, 0, 0.35);
+}
+
+.y2k-cobalt-button {
+  background: linear-gradient(135deg, #2563EB 0%, #4F46E5 60%, #7C3AED 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 6px 20px -4px rgba(37, 99, 235, 0.55);
+}
+
+.y2k-cobalt-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.y2k-grid-bg {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
