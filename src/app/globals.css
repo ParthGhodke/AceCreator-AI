@@ -71,8 +71,8 @@
   --secondary-foreground: #0b0b0b;
   --muted: #202020;
   --muted-foreground: #c6beb3;
-  --accent: #8ed8ff;
-  --accent-foreground: #0b0b0b;
+  --accent: #182329;
+  --accent-foreground: #f7f3ea;
   --destructive: #ff7168;
 
   --border: #f7f3ea;
@@ -194,6 +194,39 @@
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+/* Warm signal accent keeps secondary text readable across every route. */
+.text-blue-300,
+.text-blue-400 {
+  color: #ffd166 !important;
+}
+.text-blue-500,
+.text-blue-600 {
+  color: #ffbd4a !important;
+}
+.bg-blue-500\/10,
+.bg-blue-600\/10 {
+  background-color: rgba(255, 209, 102, 0.14) !important;
+}
+.bg-blue-500\/15,
+.bg-blue-600\/20 {
+  background-color: rgba(255, 209, 102, 0.2) !important;
+}
+.bg-blue-500,
+.bg-blue-600 {
+  background-color: #d99b24 !important;
+}
+.border-blue-500\/30,
+.border-blue-500\/40,
+.border-blue-500\/50 {
+  border-color: rgba(255, 209, 102, 0.52) !important;
+}
+.hover\:border-blue-500\/40:hover {
+  border-color: rgba(255, 209, 102, 0.72) !important;
+}
+.focus-visible\:border-blue-500:focus-visible {
+  border-color: #ffd166 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
