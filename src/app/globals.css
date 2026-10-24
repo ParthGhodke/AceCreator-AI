@@ -57,28 +57,28 @@
   --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Core Surfaces */
-  --background: #0a0d0c;
-  --foreground: #f1f3ea;
-  --card: #111614;
-  --card-foreground: #f1f3ea;
-  --popover: #151b18;
-  --popover-foreground: #f1f3ea;
+  --background: #f4f0e6;
+  --foreground: #111111;
+  --card: #fffdf5;
+  --card-foreground: #111111;
+  --popover: #fffdf5;
+  --popover-foreground: #111111;
 
   /* Brand & Accent Tokens */
-  --primary: #b7f34a;
-  --primary-foreground: #11150f;
-  --secondary: #18211d;
-  --secondary-foreground: #d8e0d5;
-  --muted: #131a17;
-  --muted-foreground: #93a099;
-  --accent: #1d3029;
-  --accent-foreground: #f1f3ea;
-  --destructive: #f16d65;
+  --primary: #d8ff3e;
+  --primary-foreground: #111111;
+  --secondary: #ffd2e1;
+  --secondary-foreground: #111111;
+  --muted: #e8e1d4;
+  --muted-foreground: #554f47;
+  --accent: #8ed8ff;
+  --accent-foreground: #111111;
+  --destructive: #ff6b5f;
 
   /* Quiet borders and focus rings */
-  --border: rgba(214, 231, 216, 0.13);
-  --input: rgba(214, 231, 216, 0.18);
-  --ring: #b7f34a;
+  --border: #111111;
+  --input: #111111;
+  --ring: #ff4fa3;
 
   /* Studio accent tokens */
   --y2k-cobalt: #6ca8ff;
@@ -95,7 +95,7 @@
   --chart-4: #EC4899;
   --chart-5: #06B6D4;
 
-  --radius: 0.875rem;
+  --radius: 0.2rem;
 
   /* Sidebar Tokens */
   --sidebar: rgba(14, 16, 23, 0.82);
@@ -121,11 +121,10 @@
   body {
     @apply bg-background text-foreground;
     background-image:
-      radial-gradient(circle at 8% 0%, rgba(183, 243, 74, 0.08), transparent 30%),
-      radial-gradient(circle at 92% 12%, rgba(108, 168, 255, 0.1), transparent 32%),
-      linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
-    background-size: auto, auto, 48px 48px, 48px 48px;
+      linear-gradient(rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 17, 17, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
     background-attachment: fixed;
   }
 
@@ -135,42 +134,38 @@
 
   /* High-visibility keyboard focus indicator */
   :focus-visible {
-    outline: 2px solid var(--ring);
+    outline: 3px solid var(--ring);
     outline-offset: 2px;
   }
 }
 
 /* Y2K Chrome & Iridescent Utility Classes */
 .y2k-chrome-card {
-  background: linear-gradient(145deg, rgba(25, 35, 30, 0.96), rgba(14, 19, 17, 0.98));
-  border: 1px solid rgba(214, 231, 216, 0.14);
-  box-shadow: 0 18px 50px -28px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255,255,255,0.06);
+  background: var(--card);
+  border: 3px solid #111111;
+  box-shadow: 7px 7px 0 #111111;
 }
 
 .y2k-iridescent-border {
   position: relative;
-  background: linear-gradient(180deg, #131724 0%, #0D0F17 100%);
-  border: 1px solid rgba(59, 130, 246, 0.35);
-  box-shadow:
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.25),
-    0 0 28px -8px rgba(59, 130, 246, 0.28);
+  background: var(--accent);
+  border: 3px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
 }
 
 .y2k-glass-panel {
-  background: rgba(12, 17, 15, 0.84);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #fffdf5;
+  border: 3px solid #111111;
+  box-shadow: 6px 6px 0 #111111;
 }
 
 .y2k-chrome-text {
-  background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 52%, #94A3B8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #111111;
+  -webkit-text-fill-color: #111111;
 }
 
 .y2k-iridescent-text {
-  background: linear-gradient(120deg, #f1f3ea 0%, #b7f34a 42%, #75d6c2 100%);
+  background: #111111;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -188,17 +183,15 @@
 }
 
 .y2k-cobalt-button {
-  background: linear-gradient(135deg, #b7f34a 0%, #74c96b 52%, #4f9d8a 100%);
-  color: #11150f;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.35),
-    0 6px 20px -4px rgba(37, 99, 235, 0.55);
+  background: var(--primary);
+  color: #111111;
+  border: 3px solid #111111;
+  box-shadow: 5px 5px 0 #111111;
 }
 
 .y2k-cobalt-button:hover:not(:disabled) {
-  filter: brightness(1.1);
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 #111111;
 }
 
 .y2k-grid-bg {
