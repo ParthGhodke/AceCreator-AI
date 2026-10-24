@@ -48,49 +48,45 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* ==========================================================================
-   ACECREATOR AI — DIRECTION 1: FUTURISTIC Y2K CHROME & IRIDESCENCE
-   ("Structured Y2K Chrome" System: Deep Obsidian Matte Canvases + Liquid
-   Chrome 1px Specular Borders + Electric Cobalt & Acid Cyber Lime Accents)
-   ========================================================================== */
+/* ==========================================================================\n   ACECREATOR AI — NIGHT SHIFT EDITORIAL SYSTEM\n   A dark, tactile studio language: warm paper highlights, signal green,\n   and editorial blue accents for a focused Instagram growth workspace.\n   ========================================================================== */
 
 :root,
 .dark {
   --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Syne", "Space Grotesk", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Syne", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Core Surfaces */
-  --background: #06070B;
-  --foreground: #F3F5FA;
-  --card: #0E1017;
-  --card-foreground: #F3F5FA;
-  --popover: #111420;
-  --popover-foreground: #F3F5FA;
+  --background: #0a0d0c;
+  --foreground: #f1f3ea;
+  --card: #111614;
+  --card-foreground: #f1f3ea;
+  --popover: #151b18;
+  --popover-foreground: #f1f3ea;
 
   /* Brand & Accent Tokens */
-  --primary: #2563EB;
-  --primary-foreground: #FFFFFF;
-  --secondary: #161A27;
-  --secondary-foreground: #E2E8F0;
-  --muted: #131722;
-  --muted-foreground: #94A3B8;
-  --accent: #1B2133;
-  --accent-foreground: #F8FAFC;
-  --destructive: #F43F5E;
+  --primary: #b7f34a;
+  --primary-foreground: #11150f;
+  --secondary: #18211d;
+  --secondary-foreground: #d8e0d5;
+  --muted: #131a17;
+  --muted-foreground: #93a099;
+  --accent: #1d3029;
+  --accent-foreground: #f1f3ea;
+  --destructive: #f16d65;
 
-  /* Specular Borders & Focus Rings */
-  --border: rgba(255, 255, 255, 0.11);
-  --input: rgba(255, 255, 255, 0.14);
-  --ring: #3B82F6;
+  /* Quiet borders and focus rings */
+  --border: rgba(214, 231, 216, 0.13);
+  --input: rgba(214, 231, 216, 0.18);
+  --ring: #b7f34a;
 
-  /* Y2K Custom Extended Tokens */
-  --y2k-cobalt: #2563EB;
-  --y2k-cobalt-glow: #3B82F6;
-  --y2k-lime: #CCFF00;
-  --y2k-violet: #8B5CF6;
-  --y2k-magenta: #EC4899;
-  --y2k-cyan: #06B6D4;
+  /* Studio accent tokens */
+  --y2k-cobalt: #6ca8ff;
+  --y2k-cobalt-glow: #8ebcff;
+  --y2k-lime: #b7f34a;
+  --y2k-violet: #b49aff;
+  --y2k-magenta: #ff8fbd;
+  --y2k-cyan: #75d6c2;
 
   /* Chart Palette */
   --chart-1: #3B82F6;
@@ -125,9 +121,11 @@
   body {
     @apply bg-background text-foreground;
     background-image:
-      radial-gradient(circle at 12% 0%, rgba(37, 99, 235, 0.14), transparent 36%),
-      radial-gradient(circle at 88% 8%, rgba(139, 92, 246, 0.11), transparent 34%),
-      radial-gradient(circle at 50% 100%, rgba(204, 255, 0, 0.04), transparent 40%);
+      radial-gradient(circle at 8% 0%, rgba(183, 243, 74, 0.08), transparent 30%),
+      radial-gradient(circle at 92% 12%, rgba(108, 168, 255, 0.1), transparent 32%),
+      linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+    background-size: auto, auto, 48px 48px, 48px 48px;
     background-attachment: fixed;
   }
 
@@ -144,11 +142,9 @@
 
 /* Y2K Chrome & Iridescent Utility Classes */
 .y2k-chrome-card {
-  background: linear-gradient(180deg, rgba(22, 26, 39, 0.85) 0%, rgba(14, 16, 23, 0.96) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
-    0 12px 32px -12px rgba(0, 0, 0, 0.65);
+  background: linear-gradient(145deg, rgba(25, 35, 30, 0.96), rgba(14, 19, 17, 0.98));
+  border: 1px solid rgba(214, 231, 216, 0.14);
+  box-shadow: 0 18px 50px -28px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .y2k-iridescent-border {
@@ -161,8 +157,8 @@
 }
 
 .y2k-glass-panel {
-  background: rgba(14, 17, 26, 0.72);
-  backdrop-filter: blur(16px);
+  background: rgba(12, 17, 15, 0.84);
+  backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -174,7 +170,7 @@
 }
 
 .y2k-iridescent-text {
-  background: linear-gradient(135deg, #60A5FA 0%, #C084FC 45%, #F472B6 75%, #CCFF00 100%);
+  background: linear-gradient(120deg, #f1f3ea 0%, #b7f34a 42%, #75d6c2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -192,7 +188,8 @@
 }
 
 .y2k-cobalt-button {
-  background: linear-gradient(135deg, #2563EB 0%, #4F46E5 60%, #7C3AED 100%);
+  background: linear-gradient(135deg, #b7f34a 0%, #74c96b 52%, #4f9d8a 100%);
+  color: #11150f;
   color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.24);
   box-shadow:

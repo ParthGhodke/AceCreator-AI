@@ -107,7 +107,7 @@ export function AppShell({
                   <span className="y2k-iridescent-text font-extrabold">AI</span>
                 </p>
                 <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  IG STUDIO OS v0.5
+                  CREATOR OPERATING SYSTEM
                 </p>
               </div>
             </div>
